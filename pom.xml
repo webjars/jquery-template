@@ -11,7 +11,7 @@
     <packaging>jar</packaging>
     <groupId>org.webjars</groupId>
     <artifactId>jquery-template</artifactId>
-    <version>1.5.0-SNAPSHOT</version>
+    <version>1.5.0</version>
     <name>jquery-template</name>
     <description>WebJar for jquery-template</description>
     <url>http://webjars.org</url>
@@ -53,7 +53,7 @@
         <url>http://github.com/webjars/jquery-template</url>
         <connection>scm:git:https://github.com/webjars/jquery-template.git</connection>
         <developerConnection>scm:git:https://github.com/webjars/jquery-template.git</developerConnection>
-        <tag>HEAD</tag>
+        <tag>jquery-template-1.5.0</tag>
     </scm>
 
     <dependencies>
@@ -76,13 +76,13 @@
                         <goals><goal>run</goal></goals>
                         <configuration>
                             <target>
-                                <echo message="download archive"/>
-                                <get src="${upstream.url}" dest="${project.build.directory}/${project.artifactId}.zip"/>
-                                <echo message="unzip archive"/>
-                                <unzip src="${project.build.directory}/${project.artifactId}.zip" dest="${project.build.directory}"/>
-                                <echo message="moving resources"/>
-                                <move tofile="${destDir}/jquery.loadTemplate.min.js" file="${project.build.directory}/${project.artifactId}-${upstream.version}/jquery-loadTemplate/jquery.loadTemplate-1.5.0.js"/>
-                                <move tofile="${destDir}/jquery.loadTemplate.js" file="${project.build.directory}/${project.artifactId}-${upstream.version}/jquery-loadTemplate/jquery.loadTemplate-1.5.0.min.js"/>
+                                <echo message="download archive" />
+                                <get src="${upstream.url}" dest="${project.build.directory}/${project.artifactId}.zip" />
+                                <echo message="unzip archive" />
+                                <unzip src="${project.build.directory}/${project.artifactId}.zip" dest="${project.build.directory}" />
+                                <echo message="moving resources" />
+                                <move tofile="${destDir}/jquery.loadTemplate.min.js" file="${project.build.directory}/${project.artifactId}-${upstream.version}/jquery-loadTemplate/jquery.loadTemplate-1.5.0.js" />
+                                <move tofile="${destDir}/jquery.loadTemplate.js" file="${project.build.directory}/${project.artifactId}-${upstream.version}/jquery-loadTemplate/jquery.loadTemplate-1.5.0.min.js" />
                             </target>
                         </configuration>
                     </execution>
